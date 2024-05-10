@@ -1,0 +1,41 @@
+public class Main {
+    public static void main(String[] args) {
+        Peixe peixe = new Peixe("Peixe Roxo", 2, "roxo", true);
+        System.out.println(peixe);
+    }
+}
+
+class Animal {
+    String nome;
+    int idade;
+
+    public Animal(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+}
+
+class Peixe extends Animal {
+    private String caracteristica;
+
+    public Peixe(String nome, int idade, String caracteristica, boolean nadadeirasGrandes) {
+        super(nome, idade);
+        this.caracteristica = "Peixe " + caracteristica + " com nadadeiras " + (nadadeirasGrandes ? "grandes" : "pequenas");
+    }
+
+    public String getCaracteristica() {
+        return caracteristica;
+    }
+
+    public void setCaracteristica(String caracteristica) {
+        this.caracteristica = caracteristica;
+    }
+
+    public String toString() {
+        return "Peixe{" +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", caracteristica='" + caracteristica + '\'' +
+                '}';
+    }
+}
