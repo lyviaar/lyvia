@@ -1,0 +1,25 @@
+public class Main {
+    public static void main(String[] args) {
+        Vaca vaca = new Vaca("grande e peluda", "grama");
+        System.out.println("Tamanho da vaca: " + vaca.getTamanho());
+        System.out.println("Alimento da vaca: " + vaca.getAlimento());
+    }
+}
+
+class Vaca {
+    private String tamanho;
+    private String alimento;
+
+    public Vaca(String tamanho, String alimento) {
+        this.tamanho = tamanho;
+        this.alimento = alimento;
+    }
+
+    public String getTamanho() {
+        return tamanho;
+    }
+
+    public String getAlimento() {
+        return alimento;
+    }
+}
